@@ -1,0 +1,25 @@
+<div class="match-words">
+  <div class="match-words__participants">
+    <div
+      class="match-words__participant"
+      *ngFor="let user of users; index as i"
+    >
+      <game-participant [user]="user"></game-participant>
+    </div>
+  </div>
+
+  <app-progress [value]="progress" (onClose)="exit($event)"></app-progress>
+
+  <!-- <app-listen-audio-test
+    [questions]="chunks"
+    (onFinish)="onFinish($event)"
+    (onInitController)="setController($event)"
+  ></app-listen-audio-test> -->
+
+  <!-- <app-draggy
+    [questions]="chunks"
+    (onFinish)="onFinish($event)"
+    (onInitController)="setController($event)"
+  >
+  </app-draggy> -->
+</div>

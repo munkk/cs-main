@@ -1,0 +1,31 @@
+<div class="usercrumb">
+  <div
+    class="usercrumb__avatar avatar-{{ avatarType }} usercrumb__avatar-size--{{
+      size
+    }}"
+  >
+    <img src="https://picsum.photos/seed/{{ user.id }}/200/300" />
+
+    <span
+      *ngIf="showStatus"
+      class="usercrumb__avatar-status usercrumb__avatar-status--{{
+        user.status
+      }}"
+    >
+    </span>
+  </div>
+
+  <div class="usercrumb__info">
+    <ng-container *ngIf="withName">
+      <div class="usercrumb__info-name">
+        {{ user.name }}
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="withPhrase">
+      <div class="usercrumb__info-phrase">
+        {{ user.company.catchPhrase }}
+      </div>
+    </ng-container>
+  </div>
+</div>

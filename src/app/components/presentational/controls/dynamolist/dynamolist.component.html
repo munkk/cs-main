@@ -1,0 +1,41 @@
+<div class="lingua-dynamolist">
+  <label *ngIf="label" [for]="label">{{ label }}:</label>
+
+  <ul class="lingua-dynamolist__choosens" *ngIf="chooses.length">
+    <li class="lingua-dynamolist__item" *ngFor="let item of chooses">
+      <ng-template
+        [ngTemplateOutlet]="chooseTemplate"
+        [ngTemplateOutletContext]="{
+          $implicit: item
+        }"
+      ></ng-template>
+    </li>
+  </ul>
+
+  <app-input
+    type="text"
+    [placeholder]="placeholder"
+    (onChange)="_onChange($event)"
+  ></app-input>
+
+  <ul
+    class="lingua-dynamolist__list"
+    [style.visibility]="canShowList ? 'visible' : 'hidden'"
+  >
+    <li class="lingua-dynamolist__item" *ngFor="let item of results$ | async">
+      <button
+        mat-flat-button
+        mat-button
+        color="secondary"
+        (click)="_onClick(item)"
+      >
+        <ng-template
+          [ngTemplateOutlet]="resultTemplate"
+          [ngTemplateOutletContext]="{
+            $implicit: item
+          }"
+        ></ng-template>
+      </button>
+    </li>
+  </ul>
+</div>

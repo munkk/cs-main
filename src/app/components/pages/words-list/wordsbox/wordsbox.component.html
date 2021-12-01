@@ -1,0 +1,11 @@
+<a [routerLink]="link" class="lingua-wordsbox" (click)="handleClick()">
+  <div class="lingua-wordsbox__icon" *ngIf="state !== 'initial'">
+    <i class="lnr-{{ getIcon() }} text-{{ getIconColor() }}"></i>
+  </div>
+
+  <div class="lingua-wordsbox__content">
+    <div *ngFor="let word of wordsbox" class="lingua-wordsbox__content-title">
+      {{ word.word || word.foreignWord }}
+    </div>
+  </div>
+</a>

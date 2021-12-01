@@ -1,0 +1,38 @@
+<div class="practice-card">
+  <app-card>
+    <app-card-header>
+      <span class="practice-card__title">{{ subject.foreignWord }}</span>
+    </app-card-header>
+    <app-card-body>
+      <div class="practice-card__item">
+        <app-button icon="lnr-volume-high" color="purple"></app-button>
+        <span class="practice-card__item-fw">
+          {{ subject.foreignWord }}
+        </span>
+        <span class="practice-card__item-t">
+          {{ subject.translation }}
+        </span>
+      </div>
+
+      <div class="practice-card__item">
+        <app-button icon="lnr-volume-high" color="purple"></app-button>
+        <span class="practice-card__item-fw">
+          {{ subject.example }}
+        </span>
+        <span class="practice-card__item-t">
+          {{ subject.exampleTranslation }}
+        </span>
+      </div>
+    </app-card-body>
+
+    <app-card-footer>
+      <div class="practice-card__footer">
+        <app-button
+          icon="lnr-mic"
+          color="purple"
+          (mousedown)="record()"
+        ></app-button>
+      </div>
+    </app-card-footer>
+  </app-card>
+</div>

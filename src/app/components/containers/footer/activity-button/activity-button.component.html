@@ -1,0 +1,14 @@
+<div
+  class="lingua-activity-button"
+  [style.top.px]="(visible$ | async) ? '-40' : '0'"
+>
+  <button
+    mat-flat-button
+    #activityButton
+    mat-button
+    (click)="onActivityButtonClick()"
+    color="primary"
+  >
+    {{ title$ | async }}
+  </button>
+</div>

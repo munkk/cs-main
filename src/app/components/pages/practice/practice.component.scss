@@ -1,0 +1,42 @@
+$toolbar-height: 60px;
+$pagetitle-height: 120px;
+
+// :host ::ng-deep {
+//   .swiper-pagination {
+//     display: none;
+//   }
+// }
+
+// :host {
+//   display: flex;
+//   width: 100%;
+//   height: calc(100% - #{$pagetitle-height});
+//   align-items: center;
+//   justify-content: center;
+//   padding-bottom: 100px;
+// }
+
+.practice-page {
+  display: flex;
+  width: 100%;
+  height: calc(100% - 120px);
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.practice-swiper {
+  width: 100%;
+  height: 100%;
+
+  &__slide {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.swiper-container {
+  width: 600px;
+  height: 300px;
+}

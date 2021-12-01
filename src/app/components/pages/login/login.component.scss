@@ -1,0 +1,32 @@
+@import "../../../style/mixins.scss";
+
+.login-page {
+  padding: rem(40px);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__title {
+    font-weight: 500;
+    font-size: rem(36px);
+    text-align: center;
+    margin-top: rem(90px);
+  }
+
+  &__sub-title {
+    text-align: center;
+  }
+
+  &__form {
+    width: 100%;
+    max-width: 560px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  app-button {
+    margin-top: 2rem;
+  }
+}

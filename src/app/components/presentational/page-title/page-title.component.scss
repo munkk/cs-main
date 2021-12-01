@@ -1,0 +1,23 @@
+.lingua-page-title {
+  display: flex;
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.45);
+  padding: 30px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+
+    &-heading {
+      font-size: 20px;
+    }
+
+    &-subheading {
+      padding: 3px 0 0;
+      font-size: 0.88rem;
+      opacity: 0.6;
+    }
+  }
+}

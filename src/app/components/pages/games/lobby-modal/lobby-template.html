@@ -1,0 +1,22 @@
+<div class="lobby-template">
+  <h2 mat-dialog-title>Ожидание игроков</h2>
+
+  <div class="lobby-template__users">
+    <div
+      class="lobby-template__user"
+      *ngFor="let user of data.users; index as i"
+    >
+      <user-crumb
+        [user]="user"
+        size="md"
+        avatarType="square"
+        [withName]="true"
+        [withPhrase]="false"
+      ></user-crumb>
+    </div>
+  </div>
+
+  <div class="lobby-template__status">
+    Готово: {{usersReady}}/{{data.users.length}}
+  </div>
+</div>

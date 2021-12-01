@@ -1,0 +1,11 @@
+<label class="lingua-checkbox">
+  <input
+    type="checkbox"
+    [checked]="isChecked"
+    (change)="onChanged($event)"
+    (blur)="onBlur($event)"
+    [disabled]="disabled"
+  />
+  <span class="checkmark"></span>
+  <span class="lingua-checkbox__text">{{ text }}</span>
+</label>

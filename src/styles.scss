@@ -1,0 +1,37 @@
+@import "./app/style/colors.scss";
+@import "./app/style/components.scss";
+@import "./assets/icons/linearicons";
+@import "./app/style//theme.scss";
+@import "~ngx-toastr/toastr";
+
+/* You can add global styles to this file, and also import other style files */
+
+html {
+}
+
+body {
+  margin: 0;
+  background-color: #f1f4f6;
+  color: #495057;
+  font-family: Segoe UI, Roboto, "Helvetica Neue", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  line-height: 1.5;
+  font-family: Segoe UI, Roboto, "Helvetica Neue", sans-serif;
+}
+
+.success {
+  background-color: #10dc60;
+}
+.text-success {
+  color: #10dc60;
+}
+
+.danger {
+  background-color: #d92550;
+}
+.text-danger {
+  color: #d92550;
+}

@@ -1,0 +1,50 @@
+<section class="login-page">
+  <app-card>
+    <app-card-header>
+      <app-button icon="lnr-arrow-left" color="purple"></app-button>
+    </app-card-header>
+    <app-card-body>
+      <h1 class="login-page__title">Войти</h1>
+      <p class="login-page__sub-title">
+        Привет! Авторизуйтесь используя свой email.
+      </p>
+
+      <form class="login-page__form">
+        <app-input
+          label="Ваш email"
+          [value]="credentials.email"
+          type="email"
+          placeholder="Email адрес"
+          (onChange)="credentials.email = $event"
+        ></app-input>
+
+        <app-input
+          label="Пароль"
+          [value]="credentials.password"
+          type="password"
+          placeholder="Пароль"
+          (onChange)="credentials.password = $event"
+        ></app-input>
+
+        <app-input
+          label="Повторите пароль"
+          [value]="credentials.password_repeat"
+          type="password"
+          placeholder="Повторите пароль"
+          (onChange)="credentials.password_repeat = $event"
+        ></app-input>
+
+        <!-- <app-button
+          color="purple_filled"
+          size="full"
+          text="Регистрация"
+          (onClick)="register()"
+        ></app-button> -->
+
+        <button mat-flat-button color="primary" (click)="register()">
+          Регистрация
+        </button>
+      </form>
+    </app-card-body>
+  </app-card>
+</section>

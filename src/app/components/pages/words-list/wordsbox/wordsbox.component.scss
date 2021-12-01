@@ -1,0 +1,46 @@
+.lingua-wordsbox {
+  color: currentColor;
+  text-decoration: none;
+  background-color: white;
+  cursor: pointer;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 4px;
+  box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03),
+    0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03),
+    0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05),
+    0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03);
+
+  &__icon {
+    font-size: 40px;
+    width: 50px;
+    margin-right: 1rem;
+    position: relative;
+  }
+
+  &__content {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    min-height: 60px;
+    align-items: center;
+
+    &-title {
+      opacity: 0.6;
+      font-size: 14px;
+    }
+
+    &-amount {
+      font-weight: bold;
+      font-size: 2.5rem;
+      line-height: 1;
+    }
+
+    &-lasttime {
+    }
+  }
+}

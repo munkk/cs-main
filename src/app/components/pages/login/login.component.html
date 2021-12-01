@@ -1,0 +1,40 @@
+<section class="login-page">
+  <app-card>
+    <app-card-header>
+      <app-button icon="lnr-arrow-left" color="purple"></app-button>
+    </app-card-header>
+    <app-card-body>
+      <h1 class="login-page__title">Войти</h1>
+      <p class="login-page__sub-title">
+        Привет! Авторизуйтесь используя свой email.
+      </p>
+
+      <form class="login-page__form" (onSubmit)="login()">
+        <app-input
+          label="Ваш email"
+          [value]="credentials.email"
+          type="email"
+          placeholder="Email адрес"
+          (onChange)="credentials.email = $event"
+        ></app-input>
+
+        <app-input
+          label="Пароль"
+          [value]="credentials.password"
+          type="password"
+          placeholder="Пароль"
+          (onChange)="credentials.password = $event"
+        ></app-input>
+
+        <app-checkbox
+          text="Запомнить меня"
+          [disabled]="false"
+          [(ngModel)]="credentials.remember"
+        >
+        </app-checkbox>
+
+        <button mat-flat-button color="primary" (click)="login()">Войти</button>
+      </form>
+    </app-card-body>
+  </app-card>
+</section>

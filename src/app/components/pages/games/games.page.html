@@ -1,0 +1,45 @@
+<div class="games-page">
+  <app-road-card
+    title="Сопоставь слова"
+    description="В этой игре вам предстоит сопоставить слово с его переводом. Слова выстроены в случайном порядке. Победит тот, кто доберется до финиша первым."
+    type="match"
+    (onClick)="configure($event)"
+  ></app-road-card>
+
+  <app-road-card
+    title="Выбери перевод"
+    description="В этой игре вам предстоит прослушать слово и выбрать соответствующий перевод. Победит тот, кто доберется до финиша первым."
+    type="select"
+    (onClick)="configure($event)"
+  ></app-road-card>
+
+  <app-road-card
+    title="Брейншторм"
+    type="brainstorm"
+    [isDisabled]="true"
+    (onClick)="configure($event)"
+  ></app-road-card>
+
+  <app-road-card
+    title="Конструктор слов"
+    type="construct"
+    [isDisabled]="true"
+    (onClick)="configure($event)"
+  ></app-road-card>
+
+  <configuration-modal
+    [isOpen]="isConfigurationModalOpen"
+    [data]="data"
+    (onClose)="isConfigurationModalOpen = false"
+    (onPlay)="onPlay($event)"
+  ></configuration-modal>
+
+  <lobby-modal
+    [isOpen]="isLobbyModalOpen"
+    [data]="configurationData"
+    (onClose)="isLobbyModalOpen = false"
+    (onReady)="onReady($event)"
+  ></lobby-modal>
+
+  <router-outlet></router-outlet>
+</div>

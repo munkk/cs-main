@@ -1,0 +1,37 @@
+<div class="lingua-insert-test">
+  <mat-card style="background-color: white">
+    <mat-card-content class="lingua-insert-test__content">
+      <div class="lingua-insert-test__content-resulticon">
+        <span>{{index + 1}} из 5</span>
+        <ng-container *ngTemplateOutlet="templateBlock"> </ng-container>
+      </div>
+
+      <div class="lingua-insert-test__content-placeholder">
+        {{answer && unit === answer? getCompleteSentence() :
+        getIncompleteSentence()}}
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="lingua-insert-test__content-answers">
+        <div
+          class="lingua-insert-test__content-answers-chip"
+          *ngFor="let item of copy"
+          (click)="selectAnswer(item)"
+          [style.display]="answer && answer === item ? 'none' : 'block'"
+          [ngClass]="{rightAnswer: answer && unit === item}"
+        >
+          {{item.foreignWord}}
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<ng-template #successTemplate>
+  <app-sweet-success type="success"></app-sweet-success>
+</ng-template>
+
+<ng-template #failTemplate>
+  <app-sweet-success type="fail"></app-sweet-success>
+</ng-template>

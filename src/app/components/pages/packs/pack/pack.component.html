@@ -1,0 +1,28 @@
+<a [routerLink]="link" class="lingua-pack" (click)="handleClick()">
+  <div class="lingua-pack__progress">
+    <span>{{ progress }}%</span>
+    <round-progress
+      [current]="progress"
+      [max]="100"
+      [color]="'#52c44f'"
+      [background]="'#f0f0f0'"
+      [radius]="62"
+      [stroke]="6"
+      [semicircle]="false"
+      [rounded]="true"
+      [clockwise]="false"
+      [responsive]="true"
+      [duration]="1400"
+      [animation]="'easeInOutQuart'"
+      [animationDelay]="0"
+    >
+    </round-progress>
+  </div>
+  <div class="lingua-pack__content">
+    <span class="lingua-pack__content-title"> Количество слов </span>
+    <span class="lingua-pack__content-amount">
+      {{ wordsAmount }}
+    </span>
+    <span class="lingua-pack__content-lasttime"> Последний день занятий </span>
+  </div>
+</a>

@@ -1,0 +1,13 @@
+@import "../../../style/mixins.scss";
+
+.profile {
+  &__form {
+    max-width: 600px;
+    margin: rem(100px) auto 0;
+  }
+
+  button {
+    margin-top: rem(30px);
+    width: 100%;
+  }
+}

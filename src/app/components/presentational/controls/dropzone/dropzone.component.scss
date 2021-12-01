@@ -1,0 +1,23 @@
+:host ::ng-deep {
+  .dz {
+    &-wrapper {
+      border: none;
+    }
+
+    &-message {
+      height: 250px;
+    }
+  }
+}
+
+.lingua-dropzone {
+  .dz {
+    &-wrapper {
+      border: none;
+    }
+
+    &-message {
+      height: 250px;
+    }
+  }
+}

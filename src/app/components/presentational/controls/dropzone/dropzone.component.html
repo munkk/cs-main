@@ -1,0 +1,7 @@
+<div class="lingua-dropzone">
+  <dropzone
+    [message]="'Перетащите файл сюда'"
+    (error)="onUploadError($event)"
+    (success)="onUploadSuccess($event)"
+  ></dropzone>
+</div>

@@ -1,0 +1,20 @@
+:host ::ng-deep {
+  .lingua-button {
+    &__inner {
+      padding: 7px;
+    }
+  }
+}
+
+.lingua-activity-button {
+  top: 0px;
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  transition: top 0.5s;
+
+  button {
+    width: 100%;
+    border-radius: 0;
+  }
+}

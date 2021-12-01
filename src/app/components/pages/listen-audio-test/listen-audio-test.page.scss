@@ -1,0 +1,102 @@
+:host {
+  display: flex;
+  width: 100%;
+  height: calc(100% - 120px);
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 100px;
+}
+
+.lingua-audio-test {
+  text-align: center;
+  width: 80%;
+  max-width: 690px;
+  text-align: center;
+
+  &__content {
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+
+      &-resulticon {
+        height: 120.75px;
+        position: relative;
+
+        > span {
+            position: absolute;
+            left: 0;
+            opacity: 0.6;
+        }
+
+        > ion-button {
+          --box-shadow: none;
+          font-size: 2rem;
+          height: 100%;
+          width: 100%;
+          margin: 0;
+        }
+    }
+
+      &-placeholder {
+        font-size: 24px;
+        min-height: 70px;
+        text-align: center;
+        text-transform: capitalize;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+      }
+
+      &-answers {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          margin: 10px 0;
+
+          &-chip {
+              border-radius: 50px;
+              cursor: pointer;
+              transition: color .15s,background-color .15s,border-color .15s,box-shadow .15s;
+              color: #3f6ad8;
+              border-color: #3f6ad8;
+              border: 1px dashed;
+              font-size: .8rem;
+              font-weight: 500;
+              padding: .375rem .75rem;
+              text-transform: capitalize;
+              margin-right: .5rem;
+              margin-bottom: .5rem;
+
+              &:hover {
+                color:white;
+                background-color: #3f6ad8;
+                border-style: solid;
+              }
+
+          }
+      }
+  }
+
+  &__placeholder {
+    border-bottom: 2px solid rgb(229, 229, 229);
+    font-size: 20px;
+    text-transform: capitalize;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  &__options {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.rightAnswer {
+    color: #3ac47d !important;
+    background-color: white !important;
+    border-style: dashed !important;
+}

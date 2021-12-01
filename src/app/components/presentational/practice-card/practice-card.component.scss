@@ -1,0 +1,42 @@
+:host::ng-deep .practice-card {
+  .lingua-card {
+    &-header {
+      text-align: center;
+      font-weight: bold;
+      font-size: 2.5rem;
+      line-height: 1;
+      text-transform: capitalize;
+    }
+  }
+}
+
+.practice-card {
+  width: 80%;
+  max-width: 850px;
+  height: 80%;
+  margin: 2rem auto;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0;
+
+    &-fw {
+      flex: 3;
+      text-align: center;
+    }
+
+    &-t {
+      flex: 1;
+    }
+  }
+
+  app-button {
+    flex: 1;
+  }
+
+  &__footer {
+    text-align: center;
+  }
+}

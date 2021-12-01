@@ -1,0 +1,9 @@
+<div class="chat-page">
+  <ng-container *ngIf="token; else loader">
+    <iframe [src]="getChatUrl()" title="Chat"></iframe>
+  </ng-container>
+</div>
+
+<ng-template #loader>
+  <app-loader></app-loader>
+</ng-template>

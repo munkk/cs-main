@@ -1,0 +1,9 @@
+<div class="practice-page">
+  <div class="practice-swiper">
+    <swiper>
+      <div *ngFor="let slide of slides">
+        <app-practice-card [subject]="slide"></app-practice-card>
+      </div>
+    </swiper>
+  </div>
+</div>

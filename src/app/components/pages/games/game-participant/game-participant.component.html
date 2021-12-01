@@ -1,0 +1,16 @@
+<div class="game-participant">
+  <user-crumb
+    [user]="user"
+    size="sm"
+    avatarType="round"
+    [withName]="true"
+  ></user-crumb>
+
+  <div class="game-participant__progress">
+    <mat-progress-bar
+      mode="determinate"
+      [value]="progress"
+      color="green"
+    ></mat-progress-bar>
+  </div>
+</div>

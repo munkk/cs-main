@@ -1,0 +1,75 @@
+.usercrumb {
+  display: flex;
+  align-items: center;
+
+  &__avatar {
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &-size {
+      &--sm {
+        width: 38px;
+        height: 38px;
+      }
+
+      &--md {
+        width: 50px;
+        height: 50px;
+      }
+
+      &--lg {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    &-status {
+      width: 14px;
+      height: 14px;
+      border: #fff solid 2px;
+      position: absolute;
+      border-radius: 100%;
+      bottom: 3px;
+      right: -3px;
+
+      &--online {
+        background-color: var(--l-success);
+      }
+
+      &--recent {
+        background-color: var(--l-warn);
+      }
+
+      &--offline {
+        background-color: var(--l-off);
+      }
+    }
+  }
+
+  &__info {
+    text-align: start;
+    margin-left: 1rem;
+
+    &-phrase {
+      opacity: 0.5;
+      font-size: 12px;
+    }
+  }
+
+  .avatar-round {
+    img {
+      border-radius: 100%;
+    }
+  }
+
+  .avatar-square {
+    img {
+      border-radius: 0.39rem;
+    }
+  }
+}

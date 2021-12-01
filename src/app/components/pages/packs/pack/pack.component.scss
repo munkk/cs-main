@@ -1,0 +1,50 @@
+.lingua-pack {
+  color: currentColor;
+  text-decoration: none;
+  background-color: white;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03),
+    0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03),
+    0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05),
+    0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03);
+
+  &__progress {
+    width: 68px;
+    margin-right: 1rem;
+    position: relative;
+
+    span {
+      font-family: Roboto, "Helvetica Neue", sans-serif;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.6;
+      font-weight: bold;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    &-title {
+      opacity: 0.6;
+      font-size: 14px;
+    }
+
+    &-amount {
+      font-weight: bold;
+      font-size: 2.5rem;
+      line-height: 1;
+    }
+
+    &-lasttime {
+    }
+  }
+}

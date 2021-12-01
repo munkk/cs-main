@@ -1,0 +1,22 @@
+:host ::ng-deep {
+  .usercrumb {
+    &__info-phrase {
+      display: none;
+    }
+  }
+
+  .mat-dialog-content {
+    > app-dynamolist,
+    > app-input {
+      margin-top: 2rem;
+    }
+  }
+}
+
+.configuration-template {
+  .mat-dialog-content {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+  }
+}

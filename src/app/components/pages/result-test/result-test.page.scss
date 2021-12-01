@@ -1,0 +1,40 @@
+:host {
+    display: flex;
+    width: 100%;
+    height: calc(100% - 120px);
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 100px;
+  }
+  
+.lingua-result-test {
+    text-align: center;
+    width: 80%;
+    max-width: 690px;
+    text-align: center;
+  
+    &__content {
+        padding: 1.25rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        > img {
+            width: 260px;
+            height: 260px;
+            margin: 15px 0 20px;
+        }
+
+        &-percentage {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 5px;
+        }
+
+        &-title {
+            font-size: 20px;
+        }
+    }
+
+  }
+  

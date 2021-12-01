@@ -1,0 +1,10 @@
+<div class="words-list">
+  <app-wordsbox
+    *ngFor="let chunk of chunks$ | async; index as i"
+    link="/app/dashboard/practice"
+    [wordsbox]="chunk"
+    [state]="'completed'"
+    (onClick)="practice()"
+    [id]="i"
+  ></app-wordsbox>
+</div>

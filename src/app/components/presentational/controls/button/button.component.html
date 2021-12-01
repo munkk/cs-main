@@ -1,0 +1,14 @@
+<button
+  class="lingua-button"
+  [ngClass]="getClasses()"
+  (click)="onClickButton($event)"
+>
+  <div class="lingua-button__inner">
+    <span class="{{ icon }}"></span>
+    <span class="lingua-button__text">{{ text }}</span>
+  </div>
+
+  <ng-container *ngIf="showTemplate">
+    <ng-container *ngTemplateOutlet="template"></ng-container>
+  </ng-container>
+</button>

@@ -1,0 +1,20 @@
+<section class="profile">
+  <form class="profile__form" (onSubmit)="update()">
+    <app-input
+      label="Имя"
+      [value]="(user$ | async)?.name"
+      type="text"
+      placeholder="Имя"
+      (onChange)="credentials.name = $event"
+    ></app-input>
+
+    <button
+      mat-flat-button
+      color="primary"
+      [disabled]="isUpdating$ | async"
+      (click)="update()"
+    >
+      Сохранить
+    </button>
+  </form>
+</section>

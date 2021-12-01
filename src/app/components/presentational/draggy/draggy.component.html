@@ -1,0 +1,143 @@
+<ng-container *ngIf="options">
+  <div
+    class="draggy__draggable"
+    [style.display]="noMoreOptions ? 'none' : 'block'"
+  >
+    <div
+      cdkDropList
+      #optionsList="cdkDropList"
+      [cdkDropListData]="options"
+      [cdkDropListConnectedTo]="[list1, list2, list3, list4, list5]"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)"
+    >
+      <div
+        class="draggy__droppable-placeholder-text"
+        *ngFor="let item of options"
+        #dragRef
+        #cdkDragTest="cdkDrag"
+        [cdkDragData]="item"
+        cdkDrag
+      >
+        {{ item.text }}
+      </div>
+    </div>
+  </div>
+
+  <div class="draggy__droppable">
+    <div
+      cdkDropList
+      #list1="cdkDropList"
+      [cdkDropListData]="one"
+      [cdkDropListConnectedTo]="[optionsList, list5, list2, list3, list4]"
+      [cdkDropListEnterPredicate]="checkDropPossibility(one)"
+      class="draggy__droppable-placeholder"
+      (cdkDropListDropped)="drop($event)"
+    >
+      <div class="draggy__droppable-placeholder-translation">
+        {{ translations[0].answer }}
+      </div>
+      <div
+        class="draggy__droppable-placeholder-text"
+        *ngFor="let item of one"
+        [cdkDragDisabled]="noMoreOptions"
+        #cdkDragTest2="cdkDrag"
+        cdkDrag
+      >
+        {{ item.text }}
+      </div>
+    </div>
+
+    <div
+      cdkDropList
+      #list2="cdkDropList"
+      [cdkDropListData]="two"
+      [cdkDropListConnectedTo]="[optionsList, list1, list5, list3, list4]"
+      [cdkDropListEnterPredicate]="checkDropPossibility(two)"
+      class="draggy__droppable-placeholder"
+      (cdkDropListDropped)="drop($event)"
+    >
+      <div class="draggy__droppable-placeholder-translation">
+        {{ translations[1].answer }}
+      </div>
+      <div
+        class="draggy__droppable-placeholder-text"
+        *ngFor="let item of two"
+        [cdkDragDisabled]="noMoreOptions"
+        #cdkDragTest2="cdkDrag"
+        cdkDrag
+      >
+        {{ item.text }}
+      </div>
+    </div>
+
+    <div
+      cdkDropList
+      #list3="cdkDropList"
+      [cdkDropListData]="three"
+      [cdkDropListConnectedTo]="[optionsList, list1, list2, list5, list4]"
+      [cdkDropListEnterPredicate]="checkDropPossibility(three)"
+      class="draggy__droppable-placeholder"
+      (cdkDropListDropped)="drop($event)"
+    >
+      <div class="draggy__droppable-placeholder-translation">
+        {{ translations[2].answer }}
+      </div>
+      <div
+        class="draggy__droppable-placeholder-text"
+        *ngFor="let item of three"
+        [cdkDragDisabled]="noMoreOptions"
+        #cdkDragTest2="cdkDrag"
+        cdkDrag
+      >
+        {{ item.text }}
+      </div>
+    </div>
+
+    <div
+      cdkDropList
+      #list4="cdkDropList"
+      [cdkDropListData]="four"
+      [cdkDropListConnectedTo]="[optionsList, list1, list2, list3, list5]"
+      [cdkDropListEnterPredicate]="checkDropPossibility(four)"
+      class="draggy__droppable-placeholder"
+      (cdkDropListDropped)="drop($event)"
+    >
+      <div class="draggy__droppable-placeholder-translation">
+        {{ translations[3].answer }}
+      </div>
+      <div
+        class="draggy__droppable-placeholder-text"
+        *ngFor="let item of four"
+        [cdkDragDisabled]="noMoreOptions"
+        #cdkDragTest2="cdkDrag"
+        cdkDrag
+      >
+        {{ item.text }}
+      </div>
+    </div>
+
+    <div
+      cdkDropList
+      #list5="cdkDropList"
+      [cdkDropListData]="five"
+      [cdkDropListConnectedTo]="[optionsList, list1, list2, list3, list4]"
+      [cdkDropListEnterPredicate]="checkDropPossibility(five)"
+      class="draggy__droppable-placeholder"
+      (cdkDropListDropped)="drop($event)"
+    >
+      <div class="draggy__droppable-placeholder-translation">
+        {{ translations[4].answer }}
+      </div>
+      <div
+        class="draggy__droppable-placeholder-text"
+        *ngFor="let item of five"
+        [cdkDragDisabled]="noMoreOptions"
+        #cdkDragTest2="cdkDrag"
+        cdkDrag
+      >
+        {{ item.text }}
+      </div>
+    </div>
+  </div>
+</ng-container>
