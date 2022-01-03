@@ -15,7 +15,7 @@ import { SafePipe } from 'src/app/pipes/safe.pipe';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ChatPage {
-  token;
+  token = '123';
 
   constructor(
     private authService: AuthService,
@@ -23,13 +23,13 @@ export class ChatPage {
     private cd: ChangeDetectorRef,
     private router: Router
   ) {
-    this.setToken();
+    //this.setToken();
 
     window.addEventListener('message', this.receiveMessage, false);
   }
 
   getChatUrl() {
-    const url = `http://localhost:4300?token=${this.token}`;
+    const url = `http://localhost:4400?token=${this.token}`;
     return this.safePipe.transform(url, 'resourceUrl');
   }
 

@@ -1,29 +1,34 @@
-const pages = [
-  {
-    title: 'Курсы',
+const moduleMap = {
+  course: {
+    title: 'Courses',
     url: '/app/courses',
     icon: 'home',
   },
-  {
-    title: 'Сообщения',
+  chat: {
+    title: 'Chat',
     url: '/app/chat',
     icon: 'mail',
   },
-  {
-    title: 'Тренажер',
+  trainer: {
+    title: 'Trainer',
     url: '/app/trainer',
     icon: 'joy',
   },
-  {
-    title: 'Игры',
+  games: {
+    title: 'Games',
     url: '/app/games',
     icon: 'joy',
   },
-  {
-    title: 'Турниры',
+  tournaments: {
+    title: 'Tournaments',
     url: '/app/tournaments',
     icon: 'mail',
   },
-];
+  wiki: {
+    title: 'Wiki',
+    url: '/app/wiki',
+    icon: 'note',
+  },
+};
 
-export { pages };
+export { moduleMap };

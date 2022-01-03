@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { Store } from '@ngrx/store';
+import { select, Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
 import { DragQuestion } from 'src/app/components/presentational/draggy/draggy.interfaces';
 import { User } from 'src/app/interfaces/user.interface';
 import { StorageService } from 'src/app/services/storage.service';
@@ -10,6 +11,10 @@ import {
   hideActivityButton,
   showActivityButton,
 } from 'src/app/store/actions/layout.actions';
+import {
+  AppOptions,
+  selectAppOptions,
+} from 'src/app/store/reducers/layout.reducer';
 import { chunkArray } from 'src/app/utils/common';
 import { GameOptions } from '../game.interface';
 
@@ -26,6 +31,7 @@ export class MatchWords {
   currentPage = 0;
   progress = 0;
   controller = null;
+  appOptions$: Observable<AppOptions>;
 
   constructor(
     private router: Router,
@@ -39,6 +45,7 @@ export class MatchWords {
     } else {
       this.store.dispatch(changeActivityButtonTitle({ value: 'Далее' }));
       this.setOptions(options);
+      this.appOptions$ = this.store.pipe(select(selectAppOptions));
       this.setChunks();
     }
   }
@@ -58,8 +65,10 @@ export class MatchWords {
   }
 
   setChunks() {
-    this.storageService.get('english1').then((list) => {
-      this.chunks = chunkArray(list, 5).slice(0, (+this.amount || 20) / 5);
+    this.appOptions$.subscribe((options: AppOptions) => {
+      this.storageService.get(options.type).then((list) => {
+        this.chunks = chunkArray(list, 5).slice(0, (+this.amount || 20) / 5);
+      });
     });
   }
 

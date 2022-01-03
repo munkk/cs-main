@@ -2,6 +2,12 @@ import { createAction } from '@ngrx/store';
 
 export const openSidemenu = createAction('[Base Layout] OpenSidemenu');
 export const closeSidemenu = createAction('[Base Layout] CloseSidemenu');
+
+export const setAppOptions = createAction(
+  '[Base Layout] SetAppOptions',
+  (value) => ({ payload: value })
+);
+
 export const showActivityButton = createAction(
   '[Base Layout] ShowActivityButton'
 );

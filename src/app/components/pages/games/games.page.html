@@ -1,27 +1,27 @@
 <div class="games-page">
   <app-road-card
-    title="Сопоставь слова"
+    title="Match"
     description="В этой игре вам предстоит сопоставить слово с его переводом. Слова выстроены в случайном порядке. Победит тот, кто доберется до финиша первым."
     type="match"
     (onClick)="configure($event)"
   ></app-road-card>
 
   <app-road-card
-    title="Выбери перевод"
+    title="Select"
     description="В этой игре вам предстоит прослушать слово и выбрать соответствующий перевод. Победит тот, кто доберется до финиша первым."
     type="select"
     (onClick)="configure($event)"
   ></app-road-card>
 
   <app-road-card
-    title="Брейншторм"
+    title="Brainstorm"
     type="brainstorm"
     [isDisabled]="true"
     (onClick)="configure($event)"
   ></app-road-card>
 
   <app-road-card
-    title="Конструктор слов"
+    title="Construct"
     type="construct"
     [isDisabled]="true"
     (onClick)="configure($event)"

@@ -10,11 +10,24 @@ import {
   changeTitleSubheading,
   changeTitleHeading,
   changeTitleIcon,
+  setAppOptions,
 } from '../actions/layout.actions';
 import { CallbacksState } from './callbacks.reducer';
 import { UserState } from './user.reducer';
 
+export interface Module {
+  type: string;
+}
+
+export interface AppOptions {
+  type: string;
+  title: string;
+  mainColor: string;
+  modules: Module[];
+}
+
 export interface LayoutState {
+  appOptions: AppOptions;
   sidemenuIsOpened: boolean;
   activityButtonIsExpanded: boolean;
   activityButtonTitle: string;
@@ -31,6 +44,7 @@ export interface AppState {
 }
 
 const initialState: LayoutState = {
+  appOptions: null,
   sidemenuIsOpened: true,
   activityButtonIsExpanded: false,
   activityButtonTitle: 'Далее',
@@ -41,6 +55,13 @@ const initialState: LayoutState = {
 };
 
 export const selectLayout = (state: AppState) => state.layout;
+
+export const selectAppOptions = createSelector(
+  selectLayout,
+  (state: LayoutState) => {
+    return state.appOptions;
+  }
+);
 
 export const selectActivityButtonState = createSelector(
   selectLayout,
@@ -93,6 +114,10 @@ export const selectSidemenu = createSelector(
 
 const _layoutReducer = createReducer(
   initialState,
+  on(setAppOptions, (state, { payload }) => ({
+    ...state,
+    appOptions: payload,
+  })),
   on(openSidemenu, (state) => ({
     ...state,
     sidemenuIsOpened: true,

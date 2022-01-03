@@ -1,0 +1,104 @@
+{
+  "data": [
+    {
+      "id": 0,
+      "text": "Organization or program that offers advice, mentorship and resources to help small businesses grow.",
+      "answer": "Accelerator"
+    },
+    {
+      "id": 1,
+      "text": "The type of investment typically happens when a startup is in its early stages.",
+      "answer": "Angel investment"
+    },
+    {
+      "id": 2,
+      "text": "Self-fund using personal resources.",
+      "answer": "Bootstrap"
+    },
+    {
+      "id": 3,
+      "text": "How fast you are spending your money.",
+      "answer": "Burn rate"
+    },
+    {
+      "id": 4,
+      "text": "A way to transition the ownership of your company to another company and pay back your investors.",
+      "answer": "Exit"
+    },
+    {
+      "id": 5,
+      "text": "When a startup’s shares of stock are made public for the first time.",
+      "answer": "IPO"
+    },
+    {
+      "id": 6,
+      "text": "A method used to validate a business concept quickly and cheaply when founding a new company or introducing a new product.",
+      "answer": "Lean startup"
+    },
+    {
+      "id": 7,
+      "text": "A technique which involves the development of a basic version of a new product that aims to satisfy its early adopters.",
+      "answer": "MVP"
+    },
+    {
+      "id": 8,
+      "text": "Short version of a business plan which presents key figures to potential investors in hopes of winning them over.",
+      "answer": "Pitch deck"
+    },
+    {
+      "id": 9,
+      "text": "In the startup world occurs when a company quickly changes directions after previously targeting a different market segment.",
+      "answer": "Pivot"
+    },
+    {
+      "id": 10,
+      "text": "The first round of small, early-stage investment from family members, friends, banks or an investor.",
+      "answer": "Seed funding"
+    },
+    {
+      "id": 11,
+      "text": "A company often in the tech or software sector worth over US$1 billion.",
+      "answer": "Unicorn"
+    },
+    {
+      "id": 12,
+      "text": "Financing provided by firms to small, high-risk, startup companies with large growth potential in return for equity.",
+      "answer": "VC"
+    },
+    {
+      "id": 13,
+      "text": "Financing provided by firms to small, high-risk, startup companies with large growth potential in return for equity.",
+      "answer": "VC (Venture capital/Venture capitalist)"
+    },
+    {
+      "id": 14,
+      "text": "A process that involves giving or earning a right to a present or future payment, benefit or asset.",
+      "answer": "Vesting"
+    },
+    {
+      "id": 15,
+      "text": "Percentage of the potential market you hoping or have captured.",
+      "answer": "Market Penetration"
+    },
+    {
+      "id": 16,
+      "text": "it’s what investors expect to get for what they put in.",
+      "answer": "ROI (Return On Investment)"
+    },
+    {
+      "id": 17,
+      "text": "When you sell subscriptions to use the software you have designed.",
+      "answer": "SaaS (Software As A Service)"
+    },
+    {
+      "id": 18,
+      "text": "When startups giving an equity percentage to person for his or her hard work in the company.",
+      "answer": "Sweat Equity"
+    },
+    {
+      "id": 19,
+      "text": "A document which tells what percentage of ownership and voting rights will the Investors get for putting funds in your business.",
+      "answer": "Term Sheet"
+    }
+  ]
+}

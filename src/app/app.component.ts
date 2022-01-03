@@ -11,6 +11,51 @@ const helper = new JwtHelperService();
 
 import * as introJs from 'intro.js/intro.js';
 import { NavigationEnd, Router } from '@angular/router';
+import { setAppOptions } from './store/actions/layout.actions';
+import { StorageService } from './services/storage.service';
+import { StudyService } from './services/study.service';
+
+const languageApp = {
+  type: 'language',
+  title: 'CS.Lingua',
+  mainColor: '#6768ab',
+  modules: [
+    {
+      type: 'course',
+    },
+    {
+      type: 'chat',
+    },
+    {
+      type: 'trainer',
+    },
+    {
+      type: 'games',
+    },
+  ],
+};
+
+const expertiseApp = {
+  type: 'expertise',
+  title: 'CS.Expertise',
+  mainColor: '#20b8d6',
+  modules: [
+    {
+      type: 'course',
+    },
+    {
+      type: 'chat',
+    },
+    {
+      type: 'trainer',
+    },
+    {
+      type: 'wiki',
+    },
+  ],
+};
+
+const unnormalized = ['english'];
 
 @Component({
   selector: 'app-root',
@@ -19,12 +64,13 @@ import { NavigationEnd, Router } from '@angular/router';
 })
 export class AppComponent {
   introJS = introJs();
-  title = 'linguafront';
 
   constructor(
     private authSerice: AuthService,
     private store: Store,
-    private router: Router
+    private router: Router,
+    private storageService: StorageService,
+    private studyService: StudyService
   ) {
     // this.authSerice.user.pipe(filter(Boolean)).subscribe((user: JWTUser) => {
     //   this.store.dispatch(loadUser({ id: user.sub }));
@@ -36,6 +82,54 @@ export class AppComponent {
     //     }, 1000);
     //   }
     // });
+    this.setBaseOptions(this.getAppType());
+    this.checkAndRetrieveData();
+  }
+
+  getAppType() {
+    const port = window.location.port;
+    switch (port) {
+      case '4200': {
+        return languageApp;
+      }
+      case '4300': {
+        return expertiseApp;
+      }
+      default: {
+        return null;
+      }
+    }
+  }
+
+  async checkAndRetrieveData() {
+    const type = this.getAppType().type;
+    const list = await this.storageService.get(type);
+    if (!list) {
+      this.studyService.getList(type).subscribe((res: any) => {
+        let items = res.data;
+        if (unnormalized.includes(type)) {
+          items = this[`${type}PerformNormalization`](res.data);
+        }
+
+        this.storageService.set(type, items);
+      });
+    }
+  }
+
+  englishPerformNormalization(data) {
+    return data.map((item) => {
+      return {
+        id: item.id,
+        text: item.foreignWord,
+        answer: item.translation,
+        exampleText: item.example,
+        exampleAnswer: item.exampleTranslation,
+      };
+    });
+  }
+
+  setBaseOptions(options) {
+    this.store.dispatch(setAppOptions(options));
   }
 
   startTour(section) {

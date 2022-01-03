@@ -1,15 +1,17 @@
 <div class="lingua-aside">
-  <ul class="lingua-aside__menu">
-    <div class="lingua-divider"></div>
-    <li *ngFor="let p of pages; let i = index">
-      <a routerLink="{{ p.url }}">
-        <i class="{{ 'pe-7s-' + p.icon }} la-icon"></i>
-        <div>
-          {{ p.title }}
-        </div>
-      </a>
-    </li>
-  </ul>
+  <ng-container *ngIf="appOptions$ | async as options">
+    <ul class="lingua-aside__menu" [style.backgroundColor]="options.mainColor">
+      <div class="lingua-divider"></div>
+      <li *ngFor="let module of options.modules; let i = index">
+        <a routerLink="{{ moduleMap[module.type].url }}">
+          <i class="{{ 'pe-7s-' + moduleMap[module.type].icon }} la-icon"></i>
+          <div>
+            {{ moduleMap[module.type].title }}
+          </div>
+        </a>
+      </li>
+    </ul>
+  </ng-container>
 
   <div class="lingua-aside__full">
     <div class="lingua-aside__content">
