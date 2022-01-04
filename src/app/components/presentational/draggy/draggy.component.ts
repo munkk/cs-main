@@ -17,6 +17,8 @@ import {
   EventEmitter,
 } from '@angular/core';
 import { shuffle } from 'src/app/utils/common';
+import { TestBaseComponent } from '../tests/test-base/test-base.component';
+
 import { DragQuestion } from './draggy.interfaces';
 
 @Component({
@@ -24,7 +26,7 @@ import { DragQuestion } from './draggy.interfaces';
   templateUrl: './draggy.component.html',
   styleUrls: ['./draggy.component.scss'],
 })
-export class DraggyComponent implements OnInit {
+export class DraggyComponent extends TestBaseComponent implements OnInit {
   _questions: DragQuestion[][];
 
   get questions(): DragQuestion[][] {
@@ -36,9 +38,6 @@ export class DraggyComponent implements OnInit {
       this.shuffle();
     }
   }
-
-  @Output() onInitController: EventEmitter<any> = new EventEmitter();
-  @Output() onFinish: EventEmitter<any> = new EventEmitter();
 
   @ViewChild('list1') private list1!: CdkDropList;
   @ViewChild('list2') private list2!: CdkDropList;
@@ -55,22 +54,11 @@ export class DraggyComponent implements OnInit {
   four: any = [];
   five: any = [];
 
-  page = 0;
   options: DragQuestion[] = null;
   translations: DragQuestion[] = null;
 
-  constructor(private renderer: Renderer2) {}
-
-  ngOnInit() {
-    this.onInitController.emit({
-      next: () => this.next(),
-    });
-  }
-
-  next() {
-    this.invalidate();
-    this.page++;
-    this.shuffle();
+  constructor(private renderer: Renderer2) {
+    super();
   }
 
   finish() {}

@@ -42,7 +42,9 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../packs/packs.module').then((m) => m.PacksPageModule),
+              import('../trainer/trainer.page.module').then(
+                (m) => m.TrainerPageModule
+              ),
           },
         ],
       },

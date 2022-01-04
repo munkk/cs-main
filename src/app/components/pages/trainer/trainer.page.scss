@@ -1,4 +1,6 @@
-.games-page {
+@import "../../../style/mixins.scss";
+
+.trainer-page {
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
