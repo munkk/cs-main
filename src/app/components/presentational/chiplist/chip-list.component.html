@@ -1,0 +1,7 @@
+<div class="chip-list">
+  <chip
+    *ngFor="let chip of chips"
+    [data]="chip"
+    (onClick)="checkCorrectness($event)"
+  ></chip>
+</div>

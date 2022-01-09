@@ -18,6 +18,7 @@ import { LobbyModal, LobbyTemplate } from './lobby-modal/lobby-modal.component';
 import { GameParticipantComponent } from './game-participant/game-participant.component';
 import { GameResultPage } from './game-result/game-result.page';
 import { SelectRight } from './select-right/select-right.component';
+import { TestsModule } from '../../presentational/tests/tests.module';
 
 const routes: Routes = [
   {
@@ -43,6 +44,7 @@ const routes: Routes = [
   imports: [
     MatProgressBarModule,
     CommonModule,
+    TestsModule,
     MatDialogModule,
     MatButtonModule,
     RouterModule.forChild(routes),

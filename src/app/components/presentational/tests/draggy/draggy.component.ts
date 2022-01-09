@@ -17,7 +17,7 @@ import {
   EventEmitter,
 } from '@angular/core';
 import { shuffle } from 'src/app/utils/common';
-import { TestBaseComponent } from '../tests/test-base/test-base.component';
+import { TestBaseComponent } from '../test-base/test-base.component';
 
 import { DragQuestion } from './draggy.interfaces';
 

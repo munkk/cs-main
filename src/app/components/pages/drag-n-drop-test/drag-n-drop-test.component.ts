@@ -29,7 +29,7 @@ import {
   registerActivityButtonCallback,
   registerProgressbarCallback,
 } from 'src/app/store/actions/callbacks.actions';
-import { DragQuestion } from '../../presentational/draggy/draggy.interfaces';
+import { DragQuestion } from '../../presentational/tests/draggy/draggy.interfaces';
 
 @Component({
   selector: 'app-drag-n-drop-test',
@@ -92,7 +92,7 @@ export class DragNDropTestPage {
   }
 
   onFinish(data) {
-    this.store.dispatch(changeActivityButtonTitle({ value: 'Далее' }));
+    this.store.dispatch(changeActivityButtonTitle({ value: 'Next' }));
     this.store.dispatch(showActivityButton());
     this.store.dispatch(increaseProgress({ value: 25 }));
   }

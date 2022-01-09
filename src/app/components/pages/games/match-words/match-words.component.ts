@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { DragQuestion } from 'src/app/components/presentational/draggy/draggy.interfaces';
+import { DragQuestion } from 'src/app/components/presentational/tests/draggy/draggy.interfaces';
 import { User } from 'src/app/interfaces/user.interface';
 import { StorageService } from 'src/app/services/storage.service';
 import { registerActivityButtonCallback } from 'src/app/store/actions/callbacks.actions';
@@ -43,7 +43,7 @@ export class MatchWords {
     if (!options.type) {
       this.router.navigateByUrl(`/app/games`);
     } else {
-      this.store.dispatch(changeActivityButtonTitle({ value: 'Далее' }));
+      this.store.dispatch(changeActivityButtonTitle({ value: 'Next' }));
       this.setOptions(options);
       this.appOptions$ = this.store.pipe(select(selectAppOptions));
       this.setChunks();

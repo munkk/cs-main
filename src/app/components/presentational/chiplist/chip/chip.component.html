@@ -1,0 +1,8 @@
+<div
+  class="chip"
+  [ngClass]="{ chip__success: data.highlight === TestResultEnum.SUCCESS }"
+  (click)="handleClick()"
+  [attr.data-id]="data.id"
+>
+  {{ data.answer }}
+</div>

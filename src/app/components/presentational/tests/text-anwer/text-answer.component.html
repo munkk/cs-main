@@ -1,5 +1,25 @@
-<div class="text-answer-test">
-  <div class="text-answer-test__page">{{ page + 1 }}</div>
+<div class="text-answer-test" *ngIf="questions">
+  <div class="text-answer-test__head">
+    <span class="text-answer-test__page">
+      {{ page + 1 }} из {{ questions.length }}
+    </span>
+  </div>
+
+  <div class="text-answer-test__body">
+    <div class="text-answer-test__text" *ngIf="!templateBlock">
+      {{ questions[page].text }}
+    </div>
+
+    <ng-container *ngTemplateOutlet="templateBlock"> </ng-container>
+  </div>
+
+  <div lass="text-answer-test__footer">
+    <chip-list
+      [chips]="chips"
+      [answer]="questions[page]"
+      (onResult)="_onResult($event)"
+    ></chip-list>
+  </div>
 </div>
 
 <ng-template #successTemplate>

@@ -1,3 +1,7 @@
 <div class="selecty">
-  <text-answer [data]="data"></text-answer>
+  <text-answer
+    [questions]="data"
+    (onInitController)="setController($event)"
+    (onResult)="onResult($event)"
+  ></text-answer>
 </div>

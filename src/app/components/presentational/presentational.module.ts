@@ -4,9 +4,10 @@ import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { ChipComponent } from './chiplist/chip/chip.component';
+import { ChipListComponent } from './chiplist/chip-list.component';
 
 import { ControlsModule } from './controls/controls.module';
-import { DraggyComponent } from './draggy/draggy.component';
 import { LoaderComponent } from './loader/loader.component';
 
 import {
@@ -23,7 +24,6 @@ import { UserCrumb } from './usercrumb/usercrumb.component';
     CommonModule,
     MatButtonModule,
     MatDialogModule,
-    DragDropModule,
     ControlsModule,
     MatProgressBarModule,
   ],
@@ -34,8 +34,9 @@ import { UserCrumb } from './usercrumb/usercrumb.component';
     DropModalContent,
     RoadCardComponent,
     LoaderComponent,
-    DraggyComponent,
     ProgressComponent,
+    ChipListComponent,
+    ChipComponent,
   ],
   exports: [
     RatingComponent,
@@ -44,8 +45,9 @@ import { UserCrumb } from './usercrumb/usercrumb.component';
     DropModalContent,
     RoadCardComponent,
     LoaderComponent,
-    DraggyComponent,
     ProgressComponent,
+    ChipListComponent,
+    ChipComponent,
   ],
 })
 export class PresentationalModule {}
