@@ -6,11 +6,15 @@ import { Routes, RouterModule } from '@angular/router';
 import { FooterComponent } from './footer.component';
 import { ActivityButtonComponent } from './activity-button/activity-button.component';
 import { ControlsModule } from '../../presentational/controls/controls.module';
+
 import { MatButtonModule } from '@angular/material/button';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 @NgModule({
-  imports: [ControlsModule, MatButtonModule, CommonModule],
+  imports: [ControlsModule, MatButtonModule, MatTooltipModule, CommonModule, RouterModule],
   exports: [FooterComponent],
   declarations: [FooterComponent, ActivityButtonComponent],
 })
-export class FooterModule {}
+export class FooterModule {
+  
+}

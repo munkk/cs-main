@@ -1,10 +1,21 @@
 <div class="lingua-footer">
   <app-activity-button></app-activity-button>
 
-  <div class="lingua-footer__content">
-    <div class="lingua-footer__btn-notifications">
-      <i class="dot-btn-icon lnr-bullhorn icon-gradient bg-mean-fruit"></i>
-      <span class="lingua-footer__badge"></span>
-    </div>
-  </div>
+  <nav class="lingua-footer__sections">
+    <a
+      mat-flat-button
+      mat-button
+      class="section-button"
+      *ngFor="let section of sections"
+      [routerLink]="section.url"
+      [matTooltip]="section.hint"
+      [matTooltipPosition]="'above'"
+      [ngStyle]="{ 'font-size': section.size }"
+    >
+      <div class="section-button__wrapper">
+        <i class="{{ section.icon }}"></i>
+        <span class="section-button__name" [ngStyle]="{ 'margin-top': section.marginTop }">{{section.title}}</span>
+      </div>
+    </a>
+  </nav>
 </div>
