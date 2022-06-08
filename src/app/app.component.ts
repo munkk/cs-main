@@ -89,10 +89,10 @@ export class AppComponent {
   getAppType() {
     const port = window.location.port;
     switch (port) {
-      case '4200': {
+      case '4300': {
         return languageApp;
       }
-      case '4300': {
+      case '4200': {
         return expertiseApp;
       }
       default: {

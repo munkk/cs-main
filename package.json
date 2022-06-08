@@ -4,6 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start-docker": "ng serve --host 0.0.0.0",
+    "docker-build": "docker build  -t schools .",
+    "docker": "docker run -v ${PWD}:/schools -v/schools/node_modules -p 4200:4200 --rm schools",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

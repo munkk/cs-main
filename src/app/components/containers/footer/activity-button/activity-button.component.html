@@ -1,6 +1,7 @@
 <div
   class="lingua-activity-button"
   [style.top.px]="(visible$ | async) ? '-40' : '0'"
+  [style.display]="(visible$ | async) ? 'flex' : 'none'"
 >
   <button
     mat-flat-button

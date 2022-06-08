@@ -1,17 +1,29 @@
 .lingua-footer {
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   height: 60px;
-  background: white;
-
+  width: 100%;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
   &__sections {
     position: absolute;
     z-index: 1;
-    width: 100%;
+    width: auto;
     height: 100%;
-    background: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid #a9adb1;
+    border-bottom: unset;
+    opacity: 0.8;
+    pointer-events: all;
   }
 
   .section-button {

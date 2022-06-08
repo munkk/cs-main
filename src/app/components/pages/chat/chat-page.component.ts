@@ -4,6 +4,7 @@ import {
   ChangeDetectorRef,
   Component,
 } from '@angular/core';
+import { environment } from 'src/environments/environment';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/auth/auth.service';
 import { SafePipe } from 'src/app/pipes/safe.pipe';
@@ -28,8 +29,8 @@ export class ChatPage {
     window.addEventListener('message', this.receiveMessage, false);
   }
 
-  getChatUrl() {
-    const url = `http://localhost:4400?token=${this.token}`;
+  getUrl() {
+    const url = environment.chatURL;
     return this.safePipe.transform(url, 'resourceUrl');
   }
 
