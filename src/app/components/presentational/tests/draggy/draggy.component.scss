@@ -52,7 +52,6 @@ $pagetitle-height: 120px;
     margin: 0 20px;
     transition: all 500ms;
     border-radius: 10px;
-
     @media screen and (max-width: 450px) {
       width: 95%;
     }
@@ -76,9 +75,14 @@ $pagetitle-height: 120px;
         font-weight: 600;
         font-size: 1rem;
       }
+      &:first-child {
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+      }
       &:last-child {
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
         border-bottom: dashed 2px #999;
-        margin-bottom: -3px;
       }
     }
   }
