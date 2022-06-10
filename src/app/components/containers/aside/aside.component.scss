@@ -14,7 +14,7 @@
   height: 100%;
   width: 100%;
   margin-top: $header-height;
-  height: 100vh;
+  height: calc(100vh - 60px);
 
   &__menu {
     height: 100%;

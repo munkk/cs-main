@@ -12,27 +12,22 @@
   &__sections {
     position: absolute;
     z-index: 1;
-    width: auto;
+    width: 100%;
+    background: #cbd9e5;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: white;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border: 1px solid #a9adb1;
-    border-bottom: unset;
-    opacity: 0.8;
     pointer-events: all;
   }
 
   .section-button {
-    font-size: 25px;
+    font-size: 40px;
     margin: 0 12px;
     display: flex;
     align-items: center;
-    color: var(--l-purple);
-
+    color: var(--l-dark-blue);
+    background-color: transparent;
     &__wrapper {
       display: flex;
       justify-content: center;
@@ -41,9 +36,8 @@
     }
 
     &__name {
-      font-size: 10px;
+      font-size: 14px;
       text-transform: capitalize;
-      color: #aeaeae;
     }
   }
 
