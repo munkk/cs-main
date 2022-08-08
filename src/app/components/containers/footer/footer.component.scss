@@ -1,3 +1,6 @@
+.is-active {
+  color: #255aa1 !important;
+}
 .lingua-footer {
   position: absolute;
   bottom: 0;
@@ -13,7 +16,7 @@
     position: absolute;
     z-index: 1;
     width: 100%;
-    background: #cbd9e5;
+    background: #f9f9f9;
     height: 100%;
     display: flex;
     align-items: center;
@@ -26,7 +29,7 @@
     margin: 0 12px;
     display: flex;
     align-items: center;
-    color: var(--l-dark-blue);
+    color: #909498;
     background-color: transparent;
     &__wrapper {
       display: flex;
@@ -38,6 +41,8 @@
     &__name {
       font-size: 14px;
       text-transform: capitalize;
+      font-weight: 400;
+      font-family: sans-serif;
     }
   }
 

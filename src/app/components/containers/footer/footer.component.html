@@ -8,6 +8,7 @@
       class="section-button"
       *ngFor="let section of sections"
       [routerLink]="section.url"
+      [routerLinkActive]="['is-active']"
       [matTooltip]="section.hint"
       [matTooltipPosition]="'above'"
       [ngStyle]="{ 'font-size': section.size }"

@@ -1,9 +1,7 @@
 <div class="courses-page">
   <ng-container>
-    <iframe [src]="getUrl()" title="Courses"></iframe>
+    <iframe [src]="getUrl()" title="Courses">
+      <app-loader></app-loader>
+    </iframe>
   </ng-container>
 </div>
-
-<ng-template #loader>
-  <app-loader></app-loader>
-</ng-template>
