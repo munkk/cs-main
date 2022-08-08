@@ -1,26 +1,36 @@
+.is-active {
+  color: #255aa1 !important;
+}
 .lingua-footer {
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   height: 60px;
-  background: white;
-
+  width: 100%;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
   &__sections {
     position: absolute;
     z-index: 1;
     width: 100%;
+    background: #f9f9f9;
     height: 100%;
-    background: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    pointer-events: all;
   }
 
   .section-button {
-    font-size: 25px;
+    font-size: 40px;
     margin: 0 12px;
     display: flex;
     align-items: center;
-    color: var(--l-purple);
-
+    color: #909498;
+    background-color: transparent;
     &__wrapper {
       display: flex;
       justify-content: center;
@@ -29,9 +39,10 @@
     }
 
     &__name {
-      font-size: 10px;
+      font-size: 14px;
       text-transform: capitalize;
-      color: #aeaeae;
+      font-weight: 400;
+      font-family: sans-serif;
     }
   }
 

@@ -54,6 +54,11 @@ const routes: Routes = [
           import('../chat/chat-page.module').then((m) => m.ChatPageModule),
       },
       {
+        path: 'courses',
+        loadChildren: () =>
+          import('../courses/courses-page.module').then((m) => m.CoursesPageModule),
+      },
+      {
         path: 'games',
         loadChildren: () =>
           import('../games/games.module').then((m) => m.GamesPageModule),
