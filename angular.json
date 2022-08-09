@@ -20,6 +20,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "ngx-toastr"
+            ],
             "outputPath": "dist/linguafront",
             "index": "src/index.html",
             "main": "src/main.ts",

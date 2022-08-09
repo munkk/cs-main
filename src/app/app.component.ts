@@ -37,7 +37,6 @@ const languageApp = {
 
 const expertiseApp = {
   type: 'expertise',
-  title: 'CS.Expertise',
   mainColor: '#20b8d6',
   modules: [
     {

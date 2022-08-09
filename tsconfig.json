@@ -20,6 +20,10 @@
     "module": "es2020",
     "lib": ["es2018", "dom"]
   },
+  "include": [
+    "src/**/*",
+    "node_modules/@proto-scheme"
+  ],
   "angularCompilerOptions": {
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,

@@ -2,8 +2,8 @@
 FROM node:14.18.0
 WORKDIR /schools
 COPY package.json package-lock.json .
-RUN npm install
-RUN npm install -g @angular/cli@10.2.0
+RUN yarn install
+RUN yarn install -g @angular/cli@10.2.0
 
 COPY . .
 CMD npm run start-docker
