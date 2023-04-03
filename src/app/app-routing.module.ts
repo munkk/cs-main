@@ -32,10 +32,10 @@ const routes: Routes = [
   //   path: 'lessons-list',
   //   loadChildren: () => import('./components/pages/lessons-list/lessons-list.module').then( m => m.LessonsListPageModule)
   // },
-  // {
-  //   path: 'practice',
-  //   loadChildren: () => import('./components/pages/practice/practice.module').then( m => m.PracticePageModule)
-  // },
+  {
+    path: 'practice',
+    loadChildren: () => import('./components/pages/practice/practice.module').then( m => m.PracticePageModule)
+  },
   // {
   //   path: 'result-test',
   //   loadChildren: () => import('./components/pages/result-test/result-test.module').then( m => m.ResultTestPageModule)

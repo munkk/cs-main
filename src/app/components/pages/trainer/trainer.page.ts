@@ -6,7 +6,6 @@ import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/auth/auth.service';
 import { UserService } from 'src/app/services/user.service';
 import { map, shareReplay, switchMap, take } from 'rxjs/operators';
-import { JwtHelperService } from '@auth0/angular-jwt';
 
 @Component({
   selector: 'trainer-page',

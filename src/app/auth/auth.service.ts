@@ -14,7 +14,7 @@ import {
 import { StorageService } from '../services/storage.service';
 import { timeConverter } from '../utils/common';
 
-const helper = new JwtHelperService();
+// const helper = new JwtHelperService();
 export const JWT_TOKEN = 'JWT_TOKEN';
 export const REFRESH_TOKEN = 'REFRESH_TOKEN';
 
@@ -46,17 +46,17 @@ export class AuthService {
   }
 
   loadStoredToken() {
-    this.user = from(
-      this.storage.get(JWT_TOKEN).then((token: any) => {
-        if (token) {
-          let decoded = helper.decodeToken(token);
-          this.userData.next(decoded);
-          return decoded;
-        } else {
-          return null;
-        }
-      })
-    );
+    // this.user = from(
+    //   this.storage.get(JWT_TOKEN).then((token: any) => {
+    //     if (token) {
+    //       let decoded = helper.decodeToken(token);
+    //       this.userData.next(decoded);
+    //       return decoded;
+    //     } else {
+    //       return null;
+    //     }
+    //   })
+    // );
   }
 
   refreshToken() {
