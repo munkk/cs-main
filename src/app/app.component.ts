@@ -7,7 +7,7 @@ import { AuthService, JWTUser } from './auth/auth.service';
 import { UserService } from './services/user.service';
 import { loadUser } from './store/actions/user.actions';
 
-const helper = new JwtHelperService();
+// const helper = new JwtHelperService();
 
 import * as introJs from 'intro.js/intro.js';
 import { NavigationEnd, Router } from '@angular/router';

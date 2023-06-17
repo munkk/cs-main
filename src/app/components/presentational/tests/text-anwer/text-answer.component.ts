@@ -37,7 +37,8 @@ export class TextAnswerComponent extends TestBaseComponent {
   }
   @Input() set questions(questions: TextAnswerData[]) {
     if (questions) {
-      this._questions = shuffle(questions);
+      //this._questions = shuffle(questions);
+      this._questions = questions;
       this.setChips();
     }
   }
