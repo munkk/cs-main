@@ -34,7 +34,7 @@ export class AuthService {
     private http: HttpClient,
     private router: Router
   ) {
-    this.loadStoredToken();
+    // this.loadStoredToken();
   }
 
   getJwtToken(): Promise<string> {
@@ -45,19 +45,19 @@ export class AuthService {
     return this.storage.get(REFRESH_TOKEN);
   }
 
-  loadStoredToken() {
-    this.user = from(
-      this.storage.get(JWT_TOKEN).then((token: any) => {
-        if (token) {
-          let decoded = helper.decodeToken(token);
-          this.userData.next(decoded);
-          return decoded;
-        } else {
-          return null;
-        }
-      })
-    );
-  }
+  // loadStoredToken() {
+  //   this.user = from(
+  //     this.storage.get(JWT_TOKEN).then((token: any) => {
+  //       if (token) {
+  //         let decoded = helper.decodeToken(token);
+  //         this.userData.next(decoded);
+  //         return decoded;
+  //       } else {
+  //         return null;
+  //       }
+  //     })
+  //   );
+  // }
 
   refreshToken() {
     //TODO: Implement refresh

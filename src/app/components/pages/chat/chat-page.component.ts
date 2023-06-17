@@ -30,7 +30,7 @@ export class ChatPage {
   }
 
   getUrl() {
-    const url = environment.chatURL;
+    const url = (environment as any).chatURL;
     return this.safePipe.transform(url, 'resourceUrl');
   }
 

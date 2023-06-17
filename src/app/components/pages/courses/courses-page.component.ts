@@ -24,7 +24,7 @@ export class CoursesPage {
   ) {}
 
   getUrl() {
-    const url = environment.coursesURl;
+    const url = (environment as any).coursesURl;
     return this.safePipe.transform(url, 'resourceUrl');
   }
  
